@@ -1,0 +1,296 @@
+/**
+ * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
+ * @copyright Aimeos (aimeos.org), 2015-2018
+ */
+
+
+
+/* Common styles */
+
+.aimeos .hidden {
+	display: none;
+}
+
+.aimeos a.disabled,
+.aimeos div.disabled,
+.aimeos span.disabled {
+	text-decoration: line-through;
+}
+
+.aimeos .warning,
+.aimeos .warning input {
+	color: #ff4000;
+}
+
+.aimeos .readonly {
+	border-left: 0.25rem solid #FFB070;
+	opacity: 0.66 !important;
+}
+
+.aimeos .readonly select:focus {
+	border-color: #D9534F !important;
+}
+
+.aimeos .info-list,
+.aimeos .error-list {
+	list-style: none;
+}
+
+.aimeos .info-list .sr-only:after,
+.aimeos .error-list .sr-only:after {
+	content: ":";
+}
+
+.aimeos .card.sortable-ghost,
+.aimeos tr.sortable-ghost {
+    opacity: 0;
+}
+
+.aimeos .card {
+	margin-bottom: 0.5rem;
+}
+
+.aimeos .card-header {
+	padding: 0.25rem;
+}
+
+.aimeos .header.is-invalid {
+	border-top: solid 3px #E05040;
+}
+
+.aimeos .card-header .header-label {
+	vertical-align: middle;
+}
+
+.aimeos .btn.fa {
+	font-size: 90%;
+}
+
+.aimeos .btn.act-reset.fa:before {
+	content: "\f00d";
+}
+
+.aimeos .btn.act-search.fa:before {
+	content: "\f002";
+}
+
+.aimeos .main-navbar .btn.act-show.fa:before,
+.aimeos .advanced.collapsed .btn.act-show.fa:before,
+.aimeos .card-header.collapsed .btn.act-show.fa:before {
+	content: "\f078";
+}
+
+.aimeos .advanced .btn.act-show.fa:before,
+.aimeos .card-header .btn.act-show.fa:before {
+	content: "\f077";
+}
+
+.aimeos .btn.act-add.fa:before {
+	content: "\f067";
+}
+
+.aimeos .btn.act-close.fa:before {
+	content: "\f00d";
+}
+
+.aimeos .btn.act-columns.fa:before {
+	content: "\f0db";
+}
+
+.aimeos .btn.act-copy.fa:before {
+	content: "\f0c5";
+}
+
+.aimeos .btn.act-delete.fa:before {
+	content: "\f00d";
+}
+
+.aimeos .btn.act-download.fa:before {
+	content: "\f019";
+}
+
+.aimeos .btn.act-edit.fa:before {
+	content: "\f040";
+}
+
+.aimeos .btn.act-import.fa:before {
+	content: "\f093";
+}
+
+.aimeos .btn.act-list.fa:before {
+	content: "\f0ca";
+}
+
+.aimeos .btn.act-menu.fa:before {
+	content: "\f067";
+}
+
+.aimeos .btn.act-move.fa:before {
+	content: "\f047";
+}
+
+.aimeos .btn.act-save.fa:before {
+	content: "\f0c7";
+}
+
+.aimeos .btn.act-show.fa:before {
+	content: "\f078";
+}
+
+.aimeos .btn.act-translate.fa:before {
+	content: "\f1ab";
+}
+
+.aimeos .item-refid.btn.act-view.fa {
+	font-family: inherit;
+	color: inherit;
+}
+
+.aimeos .btn.act-view.fa:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f06e";
+}
+
+.aimeos .card-tools-left {
+	display: inline-block;
+}
+
+.aimeos .card-tools-right {
+	position: absolute;
+	right: 0.5rem;
+	top: 0.45rem;
+}
+
+.aimeos .card-tools-more {
+	padding: 0 0.5rem;
+}
+
+.aimeos .content-block {
+	margin-bottom: 2.5rem;
+}
+
+.aimeos .card-block .advanced {
+	border-top: solid 1px #DFDFDF;
+	margin-bottom: 1rem;
+}
+
+.aimeos .card-block .advanced.collapsed {
+	border-bottom: solid 1px #DFDFDF;
+}
+
+.aimeos .table {
+	margin: 0;
+}
+
+.aimeos table th,
+.aimeos table td {
+	text-align: center;
+	font-weight: normal;
+	vertical-align: middle;
+	padding: 0.125rem 0.25rem;
+	height: 2.5rem;
+}
+
+.aimeos table .actions {
+	white-space: nowrap;
+	text-align: right;
+	width: 2%;
+}
+
+.aimeos table .actions .btn {
+	display: inline-block;
+}
+
+.aimeos table .list-item-new .actions .btn {
+	color: #FFFFFF;
+}
+
+.aimeos .actions-group {
+	text-align: center;
+	clear: both;
+}
+
+.aimeos .actions-group .btn {
+	min-width: 8rem;
+	margin: 0.5rem;
+}
+
+.aimeos .dropdown-item label {
+	display: block !important;
+	text-align: left;
+	color: #464a4c;
+}
+
+.aimeos .navbar-title:after {
+	content: ":";
+}
+
+.aimeos .navbar-id:not(:empty):after {
+	content: " - ";
+}
+
+.aimeos .navbar-site {
+	font-size: 80%;
+	color: #808080;
+}
+
+.aimeos .navbar-site:not(:empty):before {
+	content: "(";
+}
+
+.aimeos .navbar-site:not(:empty):after {
+	content: ")";
+}
+
+.aimeos .nav-tabs .advanced,
+.aimeos .item-content .form-group.advanced {
+	display: none;
+}
+
+.aimeos .nav-tabs .separator:hover {
+	background-color: #E0E0E0;
+}
+
+.aimeos .item-content .separator:hover {
+	background-color: #F8F8F8;
+}
+
+.aimeos .nav-tabs .more,
+.aimeos .nav-tabs .less,
+.aimeos .item-content .more,
+.aimeos .item-content .less {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-weight: bold;
+	font-size: 125%;
+	cursor: pointer;
+	color: #808080;
+	display: block;
+	text-align: center;
+	border: transparent;
+}
+
+.aimeos .nav-tabs .more:before,
+.aimeos .item-content .more:before {
+	content: "\f0d7";
+}
+
+.aimeos .nav-tabs .less:before,
+.aimeos .item-content .less:before {
+	content: "\f0d8";
+}
+
+.aimeos .tree-toolbar .btn.fa {
+	font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+	.aimeos .item .navbar-content {
+		position: -webkit-sticky;
+		position: sticky;
+		z-index: 1020;
+		top: 4.5rem;
+	}
+	.aimeos .item-container .item-actions {
+		display: none;
+	}
+}

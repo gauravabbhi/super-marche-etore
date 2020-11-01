@@ -1,0 +1,269 @@
+/**
+ * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
+ * @copyright Aimeos (aimeos.org), 2015-2018
+ */
+
+
+/* Fixes */
+
+html,
+body {
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+textarea {
+	overflow-x: hidden;
+}
+
+
+/* Bootstrap bugfixes */
+
+/* misaligned col-*-6 block in subpanels */
+.card-block.collapse.show,
+.tab-content>.row.active {
+	display: flex;
+}
+
+/* checkbox styling */
+input[type='checkbox'],
+input[type='radio'] {
+	margin: calc(0.5rem + 1px) 0;
+	height: 1rem;
+}
+
+.dropdown-menu input[type='checkbox'],
+.dropdown-menu input[type='radio'] {
+	vertical-align: middle;
+	margin: 0.25rem;
+	height: auto;
+}
+
+/* unconditional .media class fix */
+.nav-item.media {
+	display: list-item;
+	align-items: normal;
+}
+
+
+/* Bootstrap improvments */
+
+.dropdown {
+	display: inline-block;
+}
+
+
+/* Aimeos Bootstrap theme */
+
+.alert {
+	padding: 0.9rem 1.25rem;
+}
+
+.info-list.alert {
+	position: fixed;
+	z-index: 10000;
+	width: calc(100% - 4.5rem);
+}
+
+@media (min-width: 768px) {
+	.info-list.alert {
+		width: calc(100% - 5rem);
+	}
+}
+
+@media (min-width: 992px) {
+	.info-list.alert {
+		width: calc(100% - 8rem);
+	}
+}
+
+.btn {
+	box-shadow: none;
+	border: 1px solid transparent;
+	background: transparent;
+	cursor: pointer;
+	color: #98A0B0;
+}
+
+.btn-primary {
+	border: 1px solid #4090C0;
+	background-color: #4090C0;
+	border-color: #4090C0;
+	color: #FFFFFF !important;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+	box-shadow: none;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:hover,
+.show>.btn-primary.dropdown-toggle {
+	background-color: #3080B0;
+}
+
+.btn-secondary {
+	color: #292b2c;
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.btn-danger {
+	border: 1px solid #E05040;
+	background-color: #E05040;
+	border-color: #E05040;
+	color: #FFFFFF !important;
+}
+
+.btn-primary.dropdown-toggle-split {
+	border-left-color: #2070A0;
+}
+
+.table {
+	margin-bottom: 1rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: #FCFCFC;
+}
+
+.table-striped tbody tr:hover {
+	background-color: #F2F2F2;
+}
+
+.nav-tabs {
+	border: none;
+	background-color: #F8F8F8;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.nav-tabs .nav-item {
+	min-width: 15%;
+}
+
+.nav-tabs .nav-link {
+	color: #333;
+	border: none;
+	border-left: 0.2rem solid transparent;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	padding: .75em 1em;
+}
+
+.nav-tabs .nav-link:hover {
+	background-color: #E0E0E0;
+	border-left: 0.2rem solid #4090C0;
+}
+
+.nav-tabs .nav-link.active {
+	border-left: 0.2rem solid #4090C0;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	background-color: #E0E0E0;
+}
+
+.nav-tabs .nav-link.is-invalid {
+	border-left: 0.2rem solid #E05040;
+}
+
+.card-block.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.card-header {
+	background: #FFF;
+	border-top: 3px solid #4090C0;
+	border-bottom: none;
+}
+
+.card-header.collapsed {
+	border-top: 3px solid rgba(0, 0, 0, 0.125);
+}
+
+.table td,
+.table th {
+	border-top: none;
+}
+
+td.is-invalid .form-control {
+	border-color: #dc3545;
+}
+
+.form-group.row .form-control-label {
+	padding: 0.5rem 15px;
+	font-size: 90%;
+}
+
+.form-group.row label {
+	font-weight: bold;
+	text-align: right;
+	margin-bottom: 0;
+}
+
+.form-control,
+.custom-file-label {
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #bbb;
+	font-size: inherit;
+}
+
+.form-control:focus,
+.form-control.is-valid:focus,
+.form-control.is-invalid:focus {
+	border-width: 1.5px;
+	box-shadow: none;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+	background-color: #f8f8f8;
+}
+
+.form-inline label {
+	-webkit-justify-content: inherit;
+	justify-content: inherit;
+}
+
+.btn,
+.dropdown-menu {
+	font-size: 100%;
+	z-index: 1040;
+}
+
+.dropdown-item label {
+	margin: 0;
+}
+
+.aimeos {
+	font-size: 90%;
+}
+
+@media (max-width: 575px) {
+	.form-group.row label {
+		text-align: left;
+	}
+}
+
+@media (max-width: 767px) {
+	.aimeos {
+		font-size: 80%;
+	}
+
+	.navbar-brand {
+		font-size: 1rem;
+	}
+
+	.custom-select {
+		height: 33px;
+	}
+
+	.form-group.row .form-control-label {
+		font-size: 90%;
+	}
+}
