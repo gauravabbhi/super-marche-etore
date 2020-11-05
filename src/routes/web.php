@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', '\Aimeos\Shop\Controller\CatalogController@homeAction')->name('aimeos_home');
+Route::get('/admin', '\Aimeos\Shop\Controller\AdminController@indexAction')->name('aimeos_admin');
+Route::get('/account', '\Aimeos\Shop\Controller\AccountController@indexAction')->name('aimeos_account');
 
 
+
+//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    return view('dashboard');
+//})->name('dashboard');
