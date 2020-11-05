@@ -3,4 +3,5 @@
 vendor/
 node_modules/
 README.md
-mysql/
+!mysql/.gitkeep
+mysql/*
