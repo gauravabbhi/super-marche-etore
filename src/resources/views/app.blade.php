@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	@yield('aimeos_header')
-	<title>Aimeos on Laravel</title>
+	<title>Super Marche</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css">
 	<style>
 		/* Theme: Black&White */
@@ -56,20 +56,6 @@
 		@yield('aimeos_aside')
 		@yield('content')
 	</div>
-	<footer class="mt-5 p-5">
-		<div class="row">
-			<div class="col-md-8">
-				<div class="row">
-					<div class="col-sm-6 my-4"><h2 class="pb-3">LEGAL</h2><p><a href="#">Terms & Conditions</a></p><p><a href="#">Privacy Notice</a></p><p><a href="#">Imprint</a></p></div>
-					<div class="col-sm-6 my-4"><h2 class="pb-3">ABOUT US</h2><p><a href="#">Contact us</a></p><p><a href="#">Company</a></p></div>
-				</div>
-			</div>
-			<div class="col-md-4 my-4">
-				<a class="px-2 py-4 d-inline-block" href="/"><img src="http://aimeos.org/fileadmin/template/icons/logo.png" style="width: 160px" title="Aimeos Logo"></a>
-				<div class="social"><a href="#" class="sm facebook" title="Facebook" rel="noopener">Facebook</a><a href="#" class="sm twitter" title="Twitter" rel="noopener">Twitter</a><a href="#" class="sm instagram" title="Instagram" rel="noopener">Instagram</a><a href="#" class="sm youtube" title="Youtube" rel="noopener">Youtube</a></div>
-			</div>
-		</div>
-	</footer>
 	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/bootstrap@4"></script>
 	@yield('aimeos_scripts')

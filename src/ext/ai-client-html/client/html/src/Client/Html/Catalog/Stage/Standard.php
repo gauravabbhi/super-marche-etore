@@ -387,6 +387,26 @@ class Standard
 
 
 	/**
+	 * Returns the parameters used by the html client.
+	 *
+	 * @param string[] $params Associative list of all parameters
+	 * @param array $prefixes List of prefixes the parameters must start with
+	 * @return array Associative list of parameters used by the html client
+	 */
+	protected function getClientParams( array $params, array $prefixes = ['f_', 'l_', 'd_'] ) : array
+	{
+		if( isset( $params['d_prodid'] ) || isset( $params['d_name'] ) )
+		{
+			$context = $this->getContext();
+			$site = $context->getLocale()->getSiteItem()->getCode();
+			$params += (array) $context->getSession()->get( 'aimeos/catalog/lists/params/last/' . $site, [] );
+		}
+
+		return parent::getClientParams( $params, $prefixes );
+	}
+
+
+	/**
 	 * Returns the list of sub-client names configured for the client.
 	 *
 	 * @return array List of HTML client names
@@ -409,8 +429,9 @@ class Standard
 	{
 		$context = $this->getContext();
 		$config = $context->getConfig();
+		$params = map( $this->getClientParams( $view->param(), ['f_catid'] ) );
 
-		if( $catid = $view->param( 'f_catid', $config->get( 'client/html/catalog/lists/catid-default', '' ) ) )
+		if( $catid = $params->get( 'f_catid', $config->get( 'client/html/catalog/lists/catid-default' ) ) )
 		{
 			$controller = \Aimeos\Controller\Frontend::create( $context, 'catalog' );
 

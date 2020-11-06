@@ -64,12 +64,12 @@ return [
 		'html' => [
 			'basket' => [
 				'cache' => [
-					// 'enable' => false, // Disable basket content caching for development
+					 'enable' => false, // Disable basket content caching for development
 				],
 			],
 			'common' => [
 				'template' => [
-					// 'baseurl' => public_path( 'packages/aimeos/shop/themes/elegance' ),
+					 'baseurl' => public_path( 'packages/aimeos/shop/themes/super-dupper' ),
 				],
 			],
 		],
@@ -84,13 +84,13 @@ return [
 	'madmin' => [
 		'cache' => [
 			'manager' => [
-				// 'name' => 'None', // Disable caching for development
+				 'name' => 'None', // Disable caching for development
 			],
 		],
 		'log' => [
 			'manager' => [
 				'standard' => [
-					// 'loglevel' => 7, // Enable debug logging into madmin_log table
+					 'loglevel' => 7, // Enable debug logging into madmin_log table
 				],
 			],
 		],
